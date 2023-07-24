@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Ubuntu:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #000;
+    color: #fff;
+
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/header-image.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #db0001;
+  text-align: center;
+}
+.btn button{
+    background: transparent;
+}
+.btn:hover{
+    box-shadow: 0 5px 50px 0 #db0001 inset, 0 5px 50px 0 #db0001, 0 5px 50px 0 #db0001 inset, 0 5px 50px 0 #db0001;
+}
+.Sign{
+    background: #db0001;
+}
+
+
+.btn-img img{
+    width: 4px;
+    margin-left: 10px;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-content h1{
+
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 600;
+    word-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ff0000, #fff);
+    background-size: 400%;
+    font-size: 16px;
+    font-family: sans-serif;
+
+    font-weight: 200;
+    word-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+}
+ small{
+    background: linear-gradient(90deg, #ff0000, #fff);
+    background-size: 400%;
+    font-size: 16px;
+    font-family: 'Pangolin', cursive;
+    font-weight: 200;
+    word-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+}
+.email-signup{
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px #fff,
+  0px 0px 20px #fff;
+}
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+
+}
+.email-signup button{
+    /*background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;*/
+    position: relative;
+    left: 35px;
+    height: 52px;
+    width: 174px;
+    margin: 0 35px;
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    background: #111;
+    color: #fff;
+    font-size: 17px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.email-signup button{
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+        background-size: 400%;
+}
+.email-signup button::before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50px;
+    left: -5px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.email-signup button:hover::before{
+    opacity: 1;
+    z-index: -1;
+}
+.email-signup button:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+}
+@keyframes glow{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+/*---------features------------*/
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}    
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 600;
+    word-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+}
+.features p{
+    color: #fff;
+    font-family: 'Pangolin', cursive;
+    text-shadow: 0px 0px 10px #e91f9b,
+    0px 0px 20px #e91f9b;
+}
+
+/*-----------------FAQ--------------------*/
+
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+}
+
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+    text-shadow: 0px 0px 10px #8b008b,
+    0px 0px 20px #8b008b,
+    0px 0px 40px #8b008b,
+    0px 0px 60px #8b008b;
+    letter-spacing: 3px;
+}
+
+.accordian{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordian li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: transparent;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 0px;
+    font-weight: 200;
+    word-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]
+{
+    display: none;
+}
+.accordian .content{
+    background: transparent;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordian input[type="radio"]:checked + label + .content
+{
+   max-height: 600px;
+   padding: 30px 20px;
+}
+
+.accordian input[type="radio"]:checked + label::after
+{
+  transform: rotate(135deg);
+}
+
+.faq .email-signup{
+    max-width: 600px;
+    margin: 30px auto 60px;
+}
+.faq small{
+    font-size: 13px;
+}
+.ftr input{
+
+}
+.content p{
+    background: linear-gradient(90deg, #ff0000, #ffff00,  #fff);
+    background-size: 400%;
+    font-size: 18px;
+    font-family: 'Pangolin', cursive;
+    letter-spacing: 0px;
+    font-weight: 200;
+    word-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+}
+
+/*--------------------Footer-----------------------*/
+.lightbar{
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 0px 0px 10px #00b3ff,
+        0px 0px 20px #00b3ff,
+        0px 0px 40px #00b3ff;
+}
+/*
+@keyframes animatelightbar{
+   0%, 50%{
+    transform: scale(0) translateY(0);
+   }
+}*/
+
+.footer{
+    padding: 50px 15% 10px;
+
+}
+
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    text-decoration: none;
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .btn{
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 16px;
+    font-weight: 300;
+}
